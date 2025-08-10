@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><body>
+<p>Hi {{ booking.mentor.user.username }},</p>
+<p>You have a new booking:</p>
+<ul>
+  <li>Student: {{ booking.student.username }}</li>
+  <li>Date & Time: {{ booking.start }} to {{ booking.end }}</li>
+  <li>Meeting link: <a href="{{ booking.meeting_link }}">{{ booking.meeting_link }}</a></li>
+</ul>
+<p>Please be ready!</p>
+</body></html>

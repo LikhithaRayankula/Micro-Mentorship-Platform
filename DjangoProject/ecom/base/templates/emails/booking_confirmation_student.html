@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><body>
+<p>Hi {{ booking.student.username }},</p>
+<p>Your session with mentor {{ booking.mentor.user.username }} has been booked:</p>
+<ul>
+  <li>Date & Time: {{ booking.start }} to {{ booking.end }}</li>
+  <li>Meeting link: <a href="{{ booking.meeting_link }}">{{ booking.meeting_link }}</a></li>
+  <li>Fee: {% if booking.mentor.is_paid %}₹{{ booking.mentor.fee }}{% else %}Free{% endif %}</li>
+</ul>
+<p>Thank you!</p>
+</body></html>

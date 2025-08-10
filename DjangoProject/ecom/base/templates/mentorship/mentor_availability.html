@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h2>Your Available Time Slots</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add Slot</button>
+</form>
+
+<h3>Existing</h3>
+<ul>
+  {% for av in availabilities %}
+    <li>{{ av.start }} – {{ av.end }}</li>
+  {% empty %}
+    <li>No slots added yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
