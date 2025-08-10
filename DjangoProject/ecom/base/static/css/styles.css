@@ -1,0 +1,154 @@
+body { font-family: Arial, sans-serif; margin:0; padding:20px; background:#f9f9f9; }
+.mentor-cards { display:flex; flex-wrap: wrap; gap:20px; }
+.mentor-card { background:#fff; padding:20px; border:1px solid #ddd; width:200px; text-align:center; border-radius:8px; transition: box-shadow .3s; }
+.mentor-card:hover { box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+.mentor-card img { width:100%; height: auto; border-radius:50%; }
+.about { white-space: pre-wrap; margin:20px 0; }
+#calendar { max-width: 900px; margin: auto; background: #fff; padding: 10px; border-radius: 8px; }
+.form-card {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-card input[type="text"],
+.form-card input[type="password"],
+.form-card input[type="email"],
+.form-card select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.form-card .btn {
+    width: 100%;
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form-card .btn:hover {
+    background-color: #303f9f;
+}
+
+/* Advanced CSS for Home Page */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hero-section {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    animation: fadeInDown 1.2s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    transition: 0.4s ease;
+}
+
+.btn-register {
+    background-color: #00c6ff;
+}
+
+.btn-login {
+    background-color: #845ec2;
+}
+
+.cta-buttons a:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+.about-mentors {
+    padding: 60px 20px;
+    background-color: #f4f7fa;
+    text-align: center;
+}
+
+.about-mentors h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step-box {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.step-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.mentor-profile {
+  text-align: center; padding: 20px; background:#fff; border-radius:8px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom:40px;
+}
+.mentor-photo { width:200px; border-radius:50%; }
+.about { margin-top:20px; white-space: pre-wrap; }
+#calendar { max-width:800px; margin:auto; background:#fafafa; padding:15px; border-radius:8px; }
+#book-btn { background:#28a745; color:white; padding:12px 25px; border:none; border-radius:6px; margin-top:15px; cursor:pointer; }
+#book-btn:hover { background:#218838; }

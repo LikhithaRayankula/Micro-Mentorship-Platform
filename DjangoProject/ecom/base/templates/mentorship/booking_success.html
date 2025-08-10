@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Booking Success{% endblock %}
+
+{% block content %}
+<style>
+    .success-container {
+        max-width: 700px;
+        margin: 100px auto;
+        padding: 40px;
+        text-align: center;
+        background: linear-gradient(145deg, #e0f7fa, #ffffff);
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        animation: slideIn 1s ease;
+    }
+
+    .success-container h2 {
+        font-size: 2.5em;
+        color: #00695c;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .success-container p {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .success-container a {
+        display: inline-block;
+        padding: 12px 25px;
+        font-size: 1em;
+        background-color: #00796b;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        box-shadow: 0 5px 15px rgba(0, 121, 107, 0.4);
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .success-container a:hover {
+        background-color: #004d40;
+        transform: scale(1.05);
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<div class="success-container">
+  <h2>🎉 Booking Successful!</h2>
+  <p>A confirmation email has been sent to your inbox.</p>
+  <a href="{% url 'mentor_list' %}">← Back to Mentors</a>
+</div>
+{% endblock %}

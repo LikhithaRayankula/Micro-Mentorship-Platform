@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}Mentors{% endblock %}
+
+{% block content %}
+<style>
+    body {
+    background: linear-gradient(to right, #e3f2fd, #ffffff, #e3f2fd);
+    }
+
+
+    h1 {
+        text-align: center;
+        font-size: 2.8em;
+        margin-bottom: 40px;
+        color: #2c3e50;
+    }
+
+    .mentor-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .mentor-card {
+        background: linear-gradient(to bottom right, #ffffff, #f1f9ff);
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        text-align: center;
+        padding: 25px 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mentor-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .mentor-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 3px solid #007bff;
+    }
+
+    .mentor-card h3 {
+        font-size: 1.4em;
+        color: #34495e;
+        margin-bottom: 10px;
+    }
+
+    .mentor-card p {
+        font-size: 1em;
+        color: #555;
+        margin: 5px 0;
+    }
+
+    .mentor-card a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 500;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .mentor-card a:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+</style>
+
+<h1>Mentors</h1>
+<div class="mentor-cards">
+  {% for m in mentors %}
+    <span class="mentor-card">
+      <img src="{{ m.photo.url }}" alt="{{ m.user.username }}">
+      <h3>{{ m.name }}</h3>
+      <p>{{ m.qualification }} | {{ m.job_role }}</p>
+      {% if m.is_paid %}
+        <p>💰 Fee: ₹{{ m.fee }}</p>
+      {% else %}
+        <p>🆓 Free</p>
+      {% endif %}
+      <a href="{% url 'mentor_detail' m.id %}">View Profile</a>
+    </span>
+  {% endfor %}
+</div>
+{% endblock %}

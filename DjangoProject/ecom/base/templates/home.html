@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% block title %}Welcome - MicroMentorship{% endblock %}
+{% block content %}
+
+<style>
+/* General page style */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cta-buttons a {
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-register {
+    background: #4caf50;
+    color: white;
+}
+
+.btn-register:hover {
+    background: #45a049;
+}
+
+.btn-login {
+    background: #2196f3;
+    color: white;
+}
+
+.btn-login:hover {
+    background: #1976d2;
+}
+
+.btn {
+    background: #ff9800;
+    color: white;
+}
+
+.btn:hover {
+    background: #fb8c00;
+}
+
+/* About Mentors Section */
+.about-mentors {
+    padding: 60px 20px;
+    background: #f7f9fc;
+    text-align: center;
+}
+
+.about-mentors h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.step-box {
+    background: white;
+    padding: 25px 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.step-box:hover {
+    transform: translateY(-10px);
+}
+
+.step-box h3 {
+    color: #4caf50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.step-box p {
+    font-size: 1em;
+}
+</style>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Connect with the Best Mentors</h1>
+    <p>Book 1-on-1 sessions with domain experts. Quick guidance. Real results.</p>
+    <div class="cta-buttons">
+      <a href="{% url 'student_register' %}" class="btn-register">Register as Mentee</a>
+      <a href="{% url 'student_login' %}" class="btn-login">Student Login</a>
+      <a href="{% url 'mentor_login' %}" class="btn">Mentor Login</a>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="about-mentors">
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step-box">
+      <h3>Step 1</h3>
+      <p>Register as a mentee and explore available mentors (free & paid).</p>
+    </div>
+    <div class="step-box">
+      <h3>Step 2</h3>
+      <p>Select a mentor, view availability, and book a session.</p>
+    </div>
+    <div class="step-box">
+      <h3>Step 3</h3>
+      <p>Get email confirmation and attend via shared meeting link.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
